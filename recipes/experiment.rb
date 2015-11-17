@@ -7,10 +7,8 @@ script 'run_experiment' do
   group node['teraGen']['group']
   interpreter "bash"
   code <<-EOM
-rm -f /tmp/input.txt
-base64 /dev/urandom | head -c 128000000 > /tmp/input.txt
-/srv/hadoop/bin/hdfs dfs -mkdir -p /words
-/srv/hadoop/bin/hdfs dfs -copyFromLocal /tmp/input.txt /words/#{node.name}
+
+/srv/hadoop/bin/hadoop jar /srv/hadoop-2.4.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.0.jar teragen 100 /srv/teragen
   EOM
 end
 
