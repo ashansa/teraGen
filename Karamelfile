@@ -1,0 +1,9 @@
+dependencies:
+  - recipe: teraGen::install
+  - recipe: teraGen::experiment
+    local:
+      - teraGen::install
+    global:
+      - hadoop::dn
+
+
