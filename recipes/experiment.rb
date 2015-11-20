@@ -2,9 +2,9 @@
 #public_ip = my_public_ip()
 
 script 'run_experiment' do
-  cwd "/home/teraGen"
-   user node['teraGen']['user']
-  group node['teraGen']['group']
+  cwd "/home/vagrant"
+   user node['vagrant']['user']
+  group node['vagrant']['group']
   interpreter "bash"
   code <<-EOM
 

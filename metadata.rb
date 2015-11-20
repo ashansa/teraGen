@@ -22,23 +22,18 @@ attribute "teraGen/version",
 :type => 'string',
 :default => "0.1"
 
-
-attribute "teraGen/url",
-:description => "Url to download binaries for teraGen",
-:type => 'string',
-:default => ""
-
 attribute "teraGen/user",
 :description => "Run teraGen as this user",
 :type => 'string',
-:default => "teraGen"
+:default => "vagrant"
 
 attribute "teraGen/group",
 :description => "group parameter value",
 :type => "string"
+:default => "vagrant"
 
 attribute "teraGen/user",
 :description => "user parameter value",
 :type => "string"
-
+:default => "vagrant"
 
